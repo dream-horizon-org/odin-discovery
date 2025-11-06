@@ -1,0 +1,20 @@
+{
+  "account": {
+    "name": "consulAccount",
+    "provider": "aws",
+    "services": [
+    ],
+    "data": {
+      "resourceLabels": {
+        "provisioned-by-user": "$ODIN_USER",
+        "org_name": "$ODIN_ORG_NAME"
+      }
+    }
+  }
+}
+
+
+
+
+
+
