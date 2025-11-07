@@ -13,3 +13,6 @@ buildNumber.properties
 .mvn/wrapper/maven-wrapper.jar
 .idea/
 .DS_Store
+target/
+logs/
+webroot

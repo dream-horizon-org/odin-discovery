@@ -1,0 +1,16 @@
+{
+  "region": "us-east-1",
+  "domains": [
+    {
+      "id": "<public_hosted_zone_id_placeholder>",
+      "name": "example.com",
+      "isActive": true
+    },
+    {
+      "id": "<private_hosted_zone_id_placeholder>",
+      "name": "example.local",
+      "isActive": true
+    }
+  ],
+  "assumeRoleARN": "arn:aws:iam::000000000000:role/testAdminRole"
+}
