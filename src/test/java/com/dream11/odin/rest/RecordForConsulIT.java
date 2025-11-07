@@ -197,10 +197,10 @@ class RecordForConsulIT {
   }
 
   @Test
-  void deleteNonExistantRecord() throws JsonProcessingException {
+  void deleteNonExistentRecord() throws JsonProcessingException {
 
     // Arrange
-    String recordName = "nonExistantRecord.example-stag.local";
+    String recordName = "nonExistentRecord.example-stag.local";
     String value = "140.23.12.12";
 
     BatchRequest batchRequest = new BatchRequest();

@@ -33,7 +33,6 @@ public class MainLauncher extends Launcher {
 
   @Override
   public void beforeDeployingVerticle(DeploymentOptions deploymentOptions) {
-    log.info("Deploying verticles..........");
     deploymentOptions.setInstances(this.getNumOfCores());
   }
 

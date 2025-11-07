@@ -20,8 +20,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MainVerticle extends AbstractVerticle {
 
-  private static final int GC_INSTANCES = 1;
-
   @Override
   public Completable rxStart() {
     List<Deployable> deployables =
@@ -29,9 +27,6 @@ public class MainVerticle extends AbstractVerticle {
             new Deployable(
                 Constants.REST_VERTICLE,
                 new DeploymentOptions().setInstances(this.getNumOfCores())));
-    // ToDo: Commented as the agent API is not required for now. Uncomment when the agent API is
-    /*new Deployable(
-    Constants.GC_VERTICLE, new DeploymentOptions().setInstances(GC_INSTANCES)));*/
 
     return this.readConfig()
         .ignoreElement()
