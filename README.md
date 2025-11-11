@@ -39,8 +39,8 @@ A high-performance, reactive service discovery management service built with Ver
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd odin-discovery-service
+   git clone https://github.com/ds-horizon/odin-discovery.git
+   cd odin-discovery
    ```
 
 2. **Configure the database**
@@ -86,11 +86,11 @@ A high-performance, reactive service discovery management service built with Ver
 
 ### Docker Deployment
 
-The pre-built Docker image is available on Docker Hub at [https://hub.docker.com/r/odinhq/discovery-service](https://hub.docker.com/r/odinhq/discovery-service).
+The pre-built Docker image is available on Docker Hub at [https://hub.docker.com/r/odinhq/discovery](https://hub.docker.com/r/odinhq/discovery).
 
 1. **Pull and run the pre-built image**
    ```bash
-   docker pull odinhq/discovery-service:latest
+   docker pull odinhq/discovery:latest
    docker run -p 8080:8080 \
      -e DB_MASTER_HOST=your_db_host \
      -e DB_SLAVE_HOST=your_db_host \
@@ -98,12 +98,12 @@ The pre-built Docker image is available on Docker Hub at [https://hub.docker.com
      -e DB_PASSWORD=your_password \
      -e ODIN_ACCOUNT_MANAGER_HOST=your_oam_host \
      -e ODIN_ACCOUNT_MANAGER_PORT=8081 \
-     odinhq/discovery-service:latest
+     odinhq/discovery:latest
    ```
 
 2. **Or build the Docker image locally**
    ```bash
-   docker build -t odin-discovery-service .
+   docker build -t odin-discovery .
    docker run -p 8080:8080 \
      -e DB_MASTER_HOST=your_db_host \
      -e DB_SLAVE_HOST=your_db_host \
@@ -111,7 +111,7 @@ The pre-built Docker image is available on Docker Hub at [https://hub.docker.com
      -e DB_PASSWORD=your_password \
      -e ODIN_ACCOUNT_MANAGER_HOST=your_oam_host \
      -e ODIN_ACCOUNT_MANAGER_PORT=8081 \
-     odin-discovery-service
+     odin-discovery
    ```
 
 ## API Documentation
