@@ -1,4 +1,4 @@
-name: Release
+name: Publish Release
 
 on:
   release:
@@ -8,7 +8,7 @@ env:
 
 jobs:
   publish-release:
-    name: Build and Test
+    name: Publish Release
     runs-on: ubuntu-latest
     permissions:
       contents: write
