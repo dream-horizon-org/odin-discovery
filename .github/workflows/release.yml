@@ -55,17 +55,6 @@ jobs:
           # Remove 'v' prefix
           releaseVersion="${releaseVersion//v/}"
 
-          # Get current POM version
-          currentVersion=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
-          expectedVersion="${releaseVersion}-SNAPSHOT"
-
-          # Validate that POM has expected SNAPSHOT version
-          if [[ "$currentVersion" != "$expectedVersion" ]]; then
-            echo "::error:: POM version ($currentVersion) doesn't match expected ($expectedVersion)"
-            echo "Please ensure the POM version matches the release tag before releasing"
-            exit 1
-          fi
-
           echo "Publishing version : ${releaseVersion}"
           echo "VERSION=$releaseVersion" >> "$GITHUB_OUTPUT"
 

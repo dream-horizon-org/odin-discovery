@@ -54,10 +54,10 @@ A high-performance, reactive service discovery management service built with Ver
 
    Set environment variables or modify `src/main/resources/application.conf`:
    ```bash
-   export DB_MASTER_HOST=localhost
-   export DB_SLAVE_HOST=localhost
-   export DB_USERNAME=root
-   export DB_PASSWORD=your_password
+   export ODIN_DB_MASTER_HOST=localhost
+   export ODIN_DB_SLAVE_HOST=localhost
+   export ODIN_DB_USERNAME=root
+   export ODIN_DB_PASSWORD=your_password
    export ODIN_ACCOUNT_MANAGER_HOST=127.0.0.1
    export ODIN_ACCOUNT_MANAGER_PORT=8081
    ```
@@ -92,10 +92,10 @@ The pre-built Docker image is available on Docker Hub at [https://hub.docker.com
    ```bash
    docker pull odinhq/discovery:latest
    docker run -p 8080:8080 \
-     -e DB_MASTER_HOST=your_db_host \
-     -e DB_SLAVE_HOST=your_db_host \
-     -e DB_USERNAME=your_username \
-     -e DB_PASSWORD=your_password \
+     -e ODIN_DB_MASTER_HOST=your_db_host \
+     -e ODIN_DB_SLAVE_HOST=your_db_host \
+     -e ODIN_DB_USERNAME=your_username \
+     -e ODIN_DB_PASSWORD=your_password \
      -e ODIN_ACCOUNT_MANAGER_HOST=your_oam_host \
      -e ODIN_ACCOUNT_MANAGER_PORT=8081 \
      odinhq/discovery:latest
@@ -105,12 +105,12 @@ The pre-built Docker image is available on Docker Hub at [https://hub.docker.com
    ```bash
    docker build -t odin-discovery .
    docker run -p 8080:8080 \
-     -e DB_MASTER_HOST=your_db_host \
-     -e DB_SLAVE_HOST=your_db_host \
-     -e DB_USERNAME=your_username \
-     -e DB_PASSWORD=your_password \
-     -e ODIN_ACCOUNT_MANAGER_HOST=your_oam_host \
-     -e ODIN_ACCOUNT_MANAGER_PORT=8081 \
+     -e ODIN_DB_MASTER_HOST=your_db_host \
+     -e ODIN_DB_SLAVE_HOST=your_db_host \
+     -e ODIN_DB_USERNAME=your_username \
+     -e ODIN_DB_PASSWORD=your_password \
+     -e ODIN_ODIN_ACCOUNT_MANAGER_HOST=your_oam_host \
+     -e ODIN_ODIN_ACCOUNT_MANAGER_PORT=8081 \
      odin-discovery
    ```
 
@@ -159,10 +159,10 @@ The service can be configured via environment variables or configuration files. 
 
 | Environment Variable | Description | Default |
 |---------------------|-------------|---------|
-| `DB_MASTER_HOST` | MySQL master host | localhost |
-| `DB_SLAVE_HOST` | MySQL slave host | localhost |
-| `DB_USERNAME` | Database username | root |
-| `DB_PASSWORD` | Database password | (empty) |
+| `ODIN_DB_MASTER_HOST` | MySQL master host | localhost |
+| `ODIN_DB_SLAVE_HOST` | MySQL slave host | localhost |
+| `ODIN_DB_USERNAME` | Database username | root |
+| `ODIN_DB_PASSWORD` | Database password | (empty) |
 | `ODIN_ACCOUNT_MANAGER_HOST` | Odin Account Manager host | 127.0.0.1 |
 | `ODIN_ACCOUNT_MANAGER_PORT` | Odin Account Manager port | 8081 |
 | `PORT` | Service HTTP port | 8080 |
