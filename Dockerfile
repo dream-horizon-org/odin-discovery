@@ -20,3 +20,4 @@ COPY target/odin-discovery-service /opt/odin-discovery-service/
 COPY entrypoint.sh /opt/odin-discovery-service/entrypoint.sh
 
 WORKDIR /opt/odin-discovery-service
+ENTRYPOINT ["./entrypoint.sh"]
