@@ -19,4 +19,8 @@ RUN microdnf remove -y wget unzip tar && microdnf clean all
 COPY target/odin-discovery-service /opt/odin-discovery-service/
 COPY entrypoint.sh /opt/odin-discovery-service/entrypoint.sh
 
+# Remove version from jar name
+RUN cd /opt/odin-discovery-service \
+    && mv odin-discovery-service-*-fat.jar odin-discovery-service-fat.jar
+
 WORKDIR /opt/odin-discovery-service
