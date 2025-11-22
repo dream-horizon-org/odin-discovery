@@ -9,7 +9,6 @@
     </encoder>
 </appender>
 
-<logger name="com.dream11" level="trace"/>
 <logger name="io.netty" level="info"/>
 <logger name="io.grpc.netty" level="info"/>
 <logger name="software.amazon" level="info"/>
