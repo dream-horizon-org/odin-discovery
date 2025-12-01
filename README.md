@@ -39,7 +39,7 @@ A high-performance, reactive service discovery management service built with Ver
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ds-horizon/odin-discovery.git
+   git clone https://github.com/dream-horizon-org/odin-discovery.git
    cd odin-discovery
    ```
 
